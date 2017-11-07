@@ -1,6 +1,6 @@
 APP_PATH = "/home/john/rails"
 
-worker_processes 4
+worker_processes 2
 working_directory APP_PATH
 listen "/var/run/unicorn/unicorn.socket"
 pid APP_PATH + "/tmp/pids/unicorn.pid"
