@@ -1,4 +1,4 @@
-APP_PATH = "/home/apps/rails"
+APP_PATH = "/home/john/rails"
 
 worker_processes 4
 working_directory APP_PATH
