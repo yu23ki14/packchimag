@@ -9,7 +9,7 @@ $(document).on 'turbolinks:load', ->
   fix_discription_position = ->
     if $(window).width() >= 767
       windowheight = $(window).height()
-      position = windowheight/10*1.5
+      position = windowheight/10*.5
       $("#discription").css("margin-top", position + "px")
       $("#discription").css("margin-bottom", position + "px")
   fix_discription_position()
