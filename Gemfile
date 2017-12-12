@@ -30,6 +30,7 @@ gem 'devise'
 gem 'ckeditor'
 	
 gem 'carrierwave', '1.0.0'
+gem 'paperclip'
 gem 'rmagick', '2.13.4'
 gem 'mini_magick', '4.5.1'
 # Use ActiveModel has_secure_password

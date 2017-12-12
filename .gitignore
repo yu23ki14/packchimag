@@ -16,6 +16,7 @@ vendor/bundle
 production.sqlite3
 public/assets
 public/uploads
+public/system
 
 # Ignore all logfiles and tempfiles.
 /log/*
