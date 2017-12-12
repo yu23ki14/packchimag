@@ -26,5 +26,6 @@ CarrierWave.configure do |config|
   end
 
   # public配下にキャッシュができると参照されてしまうので、予め変えておく。
+  CarrierWave::SanitizedFile.sanitize_regexp = /[^[:word:]\.\-\+]/
   config.cache_dir = "#{Rails.root}/tmp/uploads"
 end
