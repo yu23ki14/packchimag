@@ -3,7 +3,7 @@
     li.col-12.col-center
       .col
         .row
-          .col-6.photo.bg-img-cover.required-container{style="background-image:url(#{asset_path "photos/2.jpg"})"}
+          .col-6.photo.bg-img-cover.required-container{style="background-image:url(#{@month.month_picture.photo.url(:medium)})"}
             = link_to "/months/#{@month.id}"
               .absolute-container.backdrop.gray
               .absolute-container.issue-title.text-contrast.row-space-2.p-r-20

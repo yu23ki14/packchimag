@@ -14,7 +14,7 @@
         = link_to "/months/#{m.id}"
           .col-md-4.col-6.row-space-4
             .border-around.month-card.required-container
-              .image.bg-img-cover[style="background-image:url(#{asset_path "photos/1.jpg"})"]
+              .image.bg-img-cover[style="background-image:url(#{MonthPicture.find_by(month_id: m.id).photo.url(:medium)})"]
               .absolute-container.backdrop.gray
               h3.absolute-container.text-contrast #{m.month}月号
               

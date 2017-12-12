@@ -1,5 +1,6 @@
 .header.row
-  h2.font-sofia.p-l-20 Packchi Magagine
+  = link_to root_path
+    h2.font-sofia.p-l-20.d-inline-block Packchi Magagine
 button.drawer-toggle.drawer-hamburger
     span.sr-only
       | toggle navigation
@@ -17,7 +18,7 @@ nav.drawer-nav{role="navigation"}
       ul
         - @monthsall.each do |months|
           li.h6.row-space-top-2
-            =link_to "months/#{months.id}"
+            =link_to "/months/#{months.id}"
               |#{months.month}月号
     li.h5.row-space-top-2.lineup
       =link_to "#"

@@ -14,14 +14,14 @@ ActiveAdmin.register Article do
 
   #filter :email
 
-  form do |f|
-    f.inputs do
+  form multipart: true do |f|
+    f.inputs Article do
       f.input :title
       f.input :subtitle
       f.cktext_area :contents, :as => :ckeditor
       f.input :month
+      f.actions
     end
-    f.actions
   end
 
 end

@@ -1,4 +1,5 @@
-.col-12.col-center.month-title.bg-img-cover.p-y-30
+.col-12.col-center.month-title.bg-img-cover.p-y-30[style="background-image:url(#{@month.month_picture.photo.url(:medium)})"]
+  .absolute-container.backdrop.gray
   .page-container.p-y-20
     .row
       h1.col-12.text-contrast #{@month.title}
