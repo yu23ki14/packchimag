@@ -115,7 +115,7 @@ Devise.setup do |config|
 
   # Send a notification email when the user's password is changed.
   # config.send_password_change_notification = false
-
+  config.secret_key = '557c14b4e0132626964b786a952ba4d69c08276f9d71bd10e9d79c6d666575daae8aa7e6f263a408250651acfc5e1b8fcc68fe41d106d42e45c8d2e04178b030'
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
   # confirming their account. For instance, if set to 2.days, the user will be
