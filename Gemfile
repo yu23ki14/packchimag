@@ -29,9 +29,9 @@ gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'devise'
 gem 'ckeditor'
 	
-gem 'carrierwave'
-gem 'rmagick'
-gem 'mini_magick'
+gem 'carrierwave', '1.0.0'
+gem 'rmagick', '2.13.4'
+gem 'mini_magick', '4.5.1'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
