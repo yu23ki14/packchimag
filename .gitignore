@@ -13,6 +13,9 @@ vendor/bundle
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-journal
+production.sqlite3
+public/assets
+public/uploads
 
 # Ignore all logfiles and tempfiles.
 /log/*
