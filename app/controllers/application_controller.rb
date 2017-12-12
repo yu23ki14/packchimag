@@ -6,6 +6,6 @@ class ApplicationController < ActionController::Base
   
   private
     def set_months
-      @months = Month.all.order("year DESC").order("month DESC")
+      @monthsall = Month.all.order("year DESC").order("month DESC")
     end
 end

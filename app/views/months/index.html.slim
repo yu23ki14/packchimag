@@ -10,7 +10,7 @@
         | Lineup 
   .row-space-top-4
     .row
-      - @months.each do |m|
+      - @monthsall.each do |m|
         = link_to "/months/#{m.id}"
           .col-md-4.col-6.row-space-4
             .border-around.month-card.required-container

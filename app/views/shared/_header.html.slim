@@ -15,7 +15,7 @@ nav.drawer-nav{role="navigation"}
         |ラインナップ
     li.lineupcontent.p-l-20
       ul
-        - @months.each do |months|
+        - @monthsall.each do |months|
           li.h6.row-space-top-2
             =link_to "months/#{months.id}"
               |#{months.month}月号
