@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require plugin
+//= require ckeditor/init
 
 //= require common
 //= require welcome
