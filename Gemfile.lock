@@ -83,9 +83,6 @@ GEM
       json (>= 1.7)
       mime-types (>= 1.16)
       mimemagic (>= 0.3.0)
-    carrierwave-dropbox (1.2.1)
-      carrierwave (~> 0.9)
-      dropbox-sdk (~> 1.6)
     ckeditor (4.2.4)
       cocaine
       orm_adapter (~> 0.5.0)
@@ -108,8 +105,6 @@ GEM
       railties (>= 4.1.0, < 5.2)
       responders
       warden (~> 1.2.3)
-    dropbox-sdk (1.6.5)
-      json
     erubi (1.7.0)
     execjs (2.7.0)
     ffi (1.9.18)
@@ -271,7 +266,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin!
   byebug
-  carrierwave-dropbox
+  carrierwave
   ckeditor
   coffee-rails
   devise
