@@ -18,7 +18,7 @@ ActiveAdmin.register Article do
     f.inputs do
       f.input :title
       f.input :subtitle
-      f.input :contents, :as => :ckeditor
+      f.cktext_area :contents, :as => :ckeditor
       f.input :month
     end
     f.actions
