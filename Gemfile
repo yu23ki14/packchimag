@@ -28,11 +28,10 @@ gem 'activeadmin', github: 'activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'devise'
 gem 'ckeditor'
-
-gem 'carrierwave-dropbox'
+	
+gem 'carrierwave'
 gem 'rmagick'
 gem 'mini_magick'
-
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
