@@ -1,0 +1,34 @@
+.page-container
+  .row-space-1.row-space-top-1
+    .row
+      p.pankuzu.col-12
+        span
+          = link_to root_path
+            | Top 
+          | > 
+          = link_to months_path
+            | Lineup 
+          | > 
+          = link_to "/months/#{@article.month_id}"
+            | #{Month.find(@article.month_id).month}月号 
+          | > 
+          | #{@article.title.truncate(13)}
+  .title-container.row-space-top-4
+    h1 #{@article.title}
+    h4 #{@article.subtitle}
+  .col-lg-9.col-md-10.col-12.col-center.row-space-top-4
+    == @article.contents
+  
+  .row-space-top-4.related-articles.col-lg-9.col-md-10.col-12.col-center
+    .row
+      - @articles.each do |a|
+        = link_to "/articles/#{a.id}"
+          .col-md-4.col-6.row-space-4
+            .border-around.article-card.required-container
+              .image.bg-img-cover[style="background-image:url(#{asset_path "photos/1.jpg"})"]
+              .p-x-5
+                h5 #{a.title.truncate(18)}
+                p #{a.subtitle.truncate(23)}
+              .edited-date.absolute-container
+                p #{a.created_at.strftime("%Y年%m月%d日")}
+    

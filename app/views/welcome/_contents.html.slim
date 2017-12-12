@@ -1,0 +1,32 @@
+.contents-container
+  ul
+    li.col-12.col-center
+      .col
+        .row
+          .col-6.photo.bg-img-cover.required-container{style="background-image:url(#{asset_path "photos/2.jpg"})"}
+            = link_to "/months/#{@months.first.id}"
+              .absolute-container.backdrop.gray
+              .absolute-container.issue-title.text-contrast.row-space-2.p-r-20
+                h2 #{@months.first.month}月号 : #{@months.first.title}
+                //p #{@months.first.subtitle}
+              
+          .col-5.col-offset-1.
+            h3 月刊パクチー通信では
+            p 月刊パクチー通信では、パクチーにまつわる様々なことを調べたり、パクチーを通したコミュニケーションや場作りについて考えています。
+            = link_to months_path, class: "button button-primary row-space-top-3 button-lg"
+              |ラインナップ
+            br
+            = link_to "#", class: "button button-primary-outline row-space-top-3 button-lg"
+              |Contact us
+    .row-space-top-6
+      .row
+        .col-12
+          h4
+            | 最新の記事
+    .row-space-top-1
+      .row
+        - @articles.each do |a|
+          li.col-3
+            = link_to "articles/#{a.id}"
+              .col-12.col-center.photo-sm.bg-img-cover{style="background-image:url(#{asset_path "photos/1.jpg"})"}
+              p.row-space-top-2 #{a.title}

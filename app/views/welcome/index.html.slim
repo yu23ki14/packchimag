@@ -1,22 +1,20 @@
-.welcome-header
-  .col-md-10.col-12.col-center
-    h1.font-sofia.row-space-top-5 Packchi Magazine
-    .row-space-top-5
-      h3 12月中旬リニューアルオープン
-    
-    .col-11.col-md-9.col-lg-8.col-center#discription
-      p
-        |月刊パクチー通信では、パクチーにまつわる様々なことを調べたり、パクチーを通したコミュニケーションや場作りについて考えています。
-        br
-        |12月号からは本格的にWEBページがオープンし、名前も「月刊パクチー通信」から「パクチーマガジン」へと変わります。
-        br
-        |読者のみなさまにとって、パクチーマガジンが少しでも親しみやすいものになるよう、記事WEBページ等を充実させていきますので、今後ともパクチーマガジンをよろしくお願いします。
-    .col-8.col-md-6.col-lg-4.col-center
-      = image_tag "logo.png", class: "col-12 col-center"
-    .text-center.row-space-top-4.flash
-      | Comming soon...  
-    
-    .text-center.row-space-top-4.p-b-30#subscribebutton
-      = link_to "https://medium.com/%E6%9C%88%E5%88%8A%E3%83%91%E3%82%AF%E3%83%81%E3%83%BC%E9%80%9A%E4%BF%A1", class: "button"
-        | Medium
+.col-md-10.col-12.col-center
+  = render "contents"
+  
+  
+  //.col-11.col-md-9.col-lg-8.col-center#discription
+    p
+      |月刊パクチー通信では、パクチーにまつわる様々なことを調べたり、パクチーを通したコミュニケーションや場作りについて考えています。
+      br
+      |12月号からは本格的にWEBページがオープンし、名前も「月刊パクチー通信」から「パクチーマガジン」へと変わります。
+      br
+      |読者のみなさまにとって、パクチーマガジンが少しでも親しみやすいものになるよう、記事WEBページ等を充実させていきますので、今後ともパクチーマガジンをよろしくお願いします。
+  //.col-8.col-md-6.col-lg-4.col-center
+    = image_tag "logo.png", class: "col-12 col-center"
+  //.text-center.row-space-top-4.flash
+    | Comming soon...  
+  
+  //.text-center.row-space-top-4.p-b-30#subscribebutton
+    = link_to "https://medium.com/%E6%9C%88%E5%88%8A%E3%83%91%E3%82%AF%E3%83%81%E3%83%BC%E9%80%9A%E4%BF%A1", class: "button"
+      | Medium
     

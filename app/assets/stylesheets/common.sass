@@ -11,6 +11,20 @@ body
   background: $brand-white
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
+  margin-top: 80px
+  
+.header
+  position: fixed
+  width: 100%
+  background: $brand-white
+  z-index: 2
+  top: 0
+  
+  h2
+    margin-left: 50px
+.drawer-open
+  .header
+    z-index: 1
   
 footer
   height: 20px
@@ -70,12 +84,15 @@ h1, h2, h3, h4, h5, h6
   font-weight: 700
   
 a
-  color: $brand-theme
+  color: $brand-dark-gray
   text-decoration: none
   &:hover, &:focus
-    color: $brand-theme-hover
+    color: $brand-light-gray
     text-decoration: underline
-
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6
+    &:hover, &:focus
+      color: $brand-light-gray
+      text-decoration: underline
 p
   word-break: break-word
 
@@ -102,7 +119,7 @@ label
   vertical-align: middle
   
 .text-primary
-  color: $brand-theme
+  color: $brand-green
 
 .text-normal
   color: $brand-gray
@@ -130,7 +147,7 @@ p
 
 @media (max-width: 767px)
   h1, .h1
-    font-size: 45px
+    font-size: 38px
   h2, .h2
     font-size: 30px
   h3, .h3
@@ -188,7 +205,7 @@ input[type="radio"], input[type="checkbox"], .radio input[type="radio"], .radio-
   vertical-align: top
 
 input[type="checkbox"]:checked
-  border-color: $brand-theme
+  border-color: $brand-green
   &:before
     content: "\f00c"
     font-family: 'FontAwesome'
@@ -198,10 +215,10 @@ input[type="checkbox"]:checked
     left: 1px
     text-align: center
     width: 1.25em
-    color: $brand-theme
+    color: $brand-green
 
 input[type="radio"]:checked
-  border-color: $brand-theme
+  border-color: $brand-green
   &:before
     content: "\f00c"
     font-family: 'FontAwesome'
@@ -211,7 +228,7 @@ input[type="radio"]:checked
     left: 1px
     text-align: center
     width: 1.25em
-    color: $brand-theme
+    color: $brand-green
     
 .selectbox
   position: relative
@@ -241,7 +258,7 @@ input[type="radio"]:checked
   &.darker
     border-color: $brand-dark-gray
   &.base
-    border-color: $brand-theme
+    border-color: $brand-green
   &.thick
     border-width: 3px
 .top-bordered
@@ -251,7 +268,7 @@ input[type="radio"]:checked
   &.darker
     border-top-color: $brand-dark-gray
   &.base
-    border-top-color: $brand-theme
+    border-top-color: $brand-green
   &.thick
     border-width: 3px
 .bottom-bordered
@@ -261,7 +278,7 @@ input[type="radio"]:checked
   &.darker
     border-bottom-color: $brand-dark-gray
   &.base
-    border-bottom-color: $brand-theme
+    border-bottom-color: $brand-green
 .radius-5
   border-radius: 5px
 .radius-10
@@ -272,7 +289,26 @@ input[type="radio"]:checked
   border-radius: 100%
     
 /* nav ================================================== */
-    
+.drawer-hamburger-icon
+  background-color: $brand-green
+  height: 3px
+  border-radius: 3px
+  &:before
+    background-color: $brand-pink
+    border-radius: 3px
+    height: 3px
+  &:after
+    background-color: $brand-pink
+    border-radius: 3px
+    height: 3px
+
+.drawer-menu
+  padding-top: 30px
+  @media (max-width: 767px)
+    padding-top: 20px
+  .lineupcontent
+    display: none
+  
 /* spacing ================================================== */
 
 .m-t-0
@@ -1000,6 +1036,10 @@ input[type="radio"]:checked
     left: 0
     right: 0
     
+/* inline block ====================================================*/
+.d-inline-block
+  display: inline-block
+    
 /* button ================================================== */
 
 .button
@@ -1017,33 +1057,37 @@ input[type="radio"]:checked
     background-color: $brand-light-gray
     color: $brand-white
 
+.button-lg
+  min-width: 180px
+  text-align: center
+
 .button-outline
-  color: $brand-contrast
-  border-color: $brand-contrast
+  color: $brand-yellow
+  border-color: $brand-yellow
   &:hover
     background-color: rgba(0, 0, 0, .5)
 
 .button-primary
   color: $brand-white
-  border-color: $brand-theme
-  background-color: $brand-theme
+  border-color: $brand-green
+  background-color: $brand-green
   &:hover
-    background-color: $brand-theme-hover
-    border-color: $brand-theme-hover
+    background-color: $brand-green-hover
+    border-color: $brand-green-hover
 
 .button-primary-outline
-  color: $brand-theme
-  border-color: $brand-theme
+  color: $brand-green
+  border-color: $brand-green
   &:hover
     color: $brand-white
-    background-color: $brand-theme
+    background-color: $brand-green-hover
 
 .button-contrast-outline
-  color: $brand-contrast
-  border-color: $brand-contrast
+  color: $brand-yellow
+  border-color: $brand-yellow
   &:hover
     color: $brand-white
-    background-color: $brand-contrast
+    background-color: $brand-yellow
     
 /* background image ================================================== */
 
@@ -1066,7 +1110,7 @@ input[type="radio"]:checked
   display: inline-block
   vertical-align: middle
   border-radius: 100%
-  border: 3px solid $brand-theme
+  border: 3px solid $brand-green
 .avatar-image-lg
   width: 64px
   height: 64px
@@ -1083,3 +1127,13 @@ input[type="radio"]:checked
   background-position: center
   background-repeat: no-repeat
   background-size: cover
+
+/* backdrop =========================================*/
+.backdrop
+  height: 100%
+  width: 100%
+  opacity: .45
+  left: 0
+  top: 0
+  &.gray
+    background-color: $brand-dark-gray

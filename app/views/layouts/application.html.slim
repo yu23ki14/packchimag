@@ -6,5 +6,7 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
     = favicon_link_tag('fav.ico')
-
-  = yield
+    link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"
+  body.drawer.drawer--left(class="#{controller.controller_name} #{controller.action_name}")
+    = render 'shared/header'
+    = yield

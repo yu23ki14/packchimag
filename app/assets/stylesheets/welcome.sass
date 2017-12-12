@@ -1,13 +1,6 @@
-.welcome-header
-  //background-image: image_url('header')
-  background-color: white
+.welcome.index
   .page-container
     height: 100%
-  h1
-    font-size: 80px
-    line-height: .9
-    @media (max-width: 768px)
-      font-size: 65px
   h3
     @media (max-width: 768px)
       font-size: 22px
@@ -15,3 +8,17 @@
     top: 40%
     @media (max-width: 768px)
       top: 35%
+  .contents-container
+    ul
+      li
+        height: 300px
+        &:first-of-type
+          height: auto
+      .photo
+        height: 400px
+      .photo-sm
+        height: 200px
+  .issue-title
+    bottom: 0
+    left: 20px
+    

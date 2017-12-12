@@ -1,0 +1,20 @@
+.col-12.col-center.lineup-title.bg-img-cover.p-y-30.text-center
+  h1.text-contrast.p-y-20.p-x-30.d-inline-block Lineup
+.page-container.row-space-top-4
+  .row
+    p.pankuzu.col-12
+      span
+        = link_to root_path
+          | Top 
+        | > 
+        | Lineup 
+  .row-space-top-4
+    .row
+      - @months.each do |m|
+        = link_to "/months/#{m.id}"
+          .col-md-4.col-6.row-space-4
+            .border-around.month-card.required-container
+              .image.bg-img-cover[style="background-image:url(#{asset_path "photos/1.jpg"})"]
+              .absolute-container.backdrop.gray
+              h3.absolute-container.text-contrast #{m.month}月号
+              

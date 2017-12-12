@@ -24,18 +24,17 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'activeadmin', github: 'activeadmin'
+gem 'inherited_resources', github: 'activeadmin/inherited_resources'
+gem 'devise'
+gem 'ckeditor'
+
+gem 'carrierwave-dropbox'
+gem 'rmagick'
+gem 'mini_magick'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
-# Use Unicorn as the app server
-# gem 'unicorn'
-
-gem 'rb-readline'
-gem 'unicorn'
-gem 'capistrano'
-gem 'capistrano-rails'
-gem 'capistrano-bundler'
-gem 'capistrano-rbenv', github: "capistrano/rbenv"
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -53,3 +52,9 @@ group :development do
   #gem 'spring'
 end
 
+group :production do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  # Use Unicorn as the app server
+  # gem 'unicorn'
+  gem 'unicorn'
+end

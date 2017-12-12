@@ -1,0 +1,24 @@
+.header.row
+  h2.font-sofia.p-l-20 Packchi Magagine
+button.drawer-toggle.drawer-hamburger
+    span.sr-only
+      | toggle navigation
+    span.drawer-hamburger-icon
+
+nav.drawer-nav{role="navigation"}
+  ul.drawer-menu.p-l-15
+    li.h5
+      =link_to "#"
+        |パクチーマガジンとは
+    li.h5.row-space-top-2.lineup
+      =link_to "#"
+        |ラインナップ
+    li.lineupcontent.p-l-20
+      ul
+        - @months.each do |months|
+          li.h6.row-space-top-2
+            =link_to "months/#{months.id}"
+              |#{months.month}月号
+    li.h5.row-space-top-2.lineup
+      =link_to "#"
+        |Contact us
