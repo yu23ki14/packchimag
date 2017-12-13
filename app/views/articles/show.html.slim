@@ -16,16 +16,19 @@
   .title-container.row-space-top-4
     h1 #{@article.title}
     h4 #{@article.subtitle}
-  .col-lg-9.col-md-10.col-12.col-center.row-space-top-4
-    == @article.contents
   
+  .col-lg-9.col-md-10.col-12.col-center.row-space-top-4
+    = image_tag @article.article_picture.photo.url(:original), class: "row-space-top-4 row-space-4 col-12 col-center p-x-0"
+    == @article.contents
+  hr.col-11.col-md-7.col-center.row-space-top-7.row-space-7
   .row-space-top-4.related-articles.col-lg-9.col-md-10.col-12.col-center
+    h4 おすすめの記事
     .row
       - @articles.each do |a|
         = link_to "/articles/#{a.id}"
           .col-md-4.col-6.row-space-4
             .border-around.article-card.required-container
-              .image.bg-img-cover[style="background-image:url(#{asset_path "photos/1.jpg"})"]
+              .image.bg-img-cover[style="background-image:url(#{a.article_picture.photo.url(:medium)})"]
               .p-x-5
                 h5 #{a.title.truncate(18)}
                 p #{a.subtitle.truncate(23)}
