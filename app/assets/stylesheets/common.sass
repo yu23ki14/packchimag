@@ -11,7 +11,9 @@ body
   background: $brand-white
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
-  margin-top: 80px
+  margin-top: 60px
+  @media (max-width: 767px)
+    margin-top: 60px
   
 .header
   position: fixed
@@ -19,11 +21,19 @@ body
   background: $brand-white
   z-index: 2
   top: 0
+  height: 50px
   h2
+    line-height: 50px
+    margin-top: 0
+    margin-bottom: 0
     margin-left: 50px
     &:hover
       text-decoration: none
       color: $brand-dark-gray
+    @media (max-width: 767px)
+      margin-top: 4px
+      letter-spacing: -2px
+      margin-left: 45px
 .drawer-open
   .header
     z-index: 1
@@ -88,6 +98,7 @@ h1, h2, h3, h4, h5, h6
 a
   color: $brand-dark-gray
   text-decoration: none
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
   &:hover, &:focus
     color: $brand-light-gray
     text-decoration: underline
@@ -152,13 +163,13 @@ p
   h1, .h1
     font-size: 38px
   h2, .h2
-    font-size: 30px
+    font-size: 27px
   h3, .h3
-    font-size: 25px
+    font-size: 24px
   h4, .h4
-    font-size: 20px
+    font-size: 22px
   h5, .h5
-    font-size: 18px
+    font-size: 16px
   h6, .h6
     font-size: 15px
     

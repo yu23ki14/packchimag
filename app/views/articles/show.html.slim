@@ -1,7 +1,7 @@
 .page-container
   .row-space-1.row-space-top-1
     .row
-      p.pankuzu.col-12
+      p.pankuzu.col-12.p-x-0
         span
           = link_to root_path
             | Top 
@@ -26,12 +26,11 @@
     .row
       - @articles.each do |a|
         = link_to "/articles/#{a.id}"
-          .col-md-4.col-6.row-space-4
+          .col-lg-4.col-md-6.col-12.row-space-4
             .border-around.article-card.required-container
               .image.bg-img-cover[style="background-image:url(#{a.article_picture.photo.url(:medium)})"]
               .p-x-5
                 h5 #{a.title.truncate(18)}
-                p #{a.subtitle.truncate(23)}
+                p #{a.subtitle.truncate(25)}
               .edited-date.absolute-container
                 p #{a.created_at.strftime("%Y年%m月%d日")}
-    
