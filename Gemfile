@@ -35,6 +35,7 @@ gem 'rmagick', '2.13.4'
 gem 'mini_magick', '4.5.1'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'dotenv-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
