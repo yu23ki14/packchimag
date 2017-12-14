@@ -11,7 +11,7 @@ body
   background: $brand-white
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
-  margin-top: 60px
+  margin-top: 70px
   @media (max-width: 767px)
     margin-top: 60px
   
@@ -174,7 +174,7 @@ p
     font-size: 15px
     
 .text-xs
-  font-size: 10px
+  font-size: 13px
 
 .text-sm
   font-size: 16px
@@ -208,7 +208,34 @@ p
 .font-sofia
   font-family: 'sofia'
   
+/* bg ================================================*/
+.bg-light-gray
+  background-color: $brand-light-gray
+.bg-light-pink
+  background-color: $brand-light-pink
+.bg-contrast
+  background-color: $brand-contrast
+
+/* alert ===================================================*/
+.alert
+  position: fixed
+  top: 10px
+  right: 10px
+  padding: 10px 10px 10px 10px
+  border-radius: 3px
+  z-index: 9999999
+  text-align: left
+.alert-notice
+  background-color: rgba(0, 0, 0, 0.6)
+  color: white
+.alert-alert
+  background-color: rgba(250, 0, 0, 0.8)
+  color: white
+  
 /* input ================================================== */
+
+input[type="text"]
+  padding: 6px
 
 input[type="radio"], input[type="checkbox"], .radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"]
   position: relative

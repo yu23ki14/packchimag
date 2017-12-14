@@ -8,5 +8,8 @@ html
     = favicon_link_tag('fav.ico')
     link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"
   body.drawer.drawer--left(class="#{controller.controller_name} #{controller.action_name}")
+    - flash.each do |key, value|
+      h6.m-t-0.m-b-0
+        = content_tag :div, value, class: "alert alert-#{key}"
     = render 'shared/header'
     = yield
