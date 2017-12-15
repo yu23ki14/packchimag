@@ -27,4 +27,4 @@
                 h3 #{a.title.truncate(20)}
                 p #{a.subtitle.truncate(60)}
               .edited-date.absolute-container
-                p #{a.created_at.strftime("%Y年%m月%d日")}
+                p #{Month.find(a.month_id).year}.#{Month.find(a.month_id).month}
