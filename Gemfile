@@ -37,6 +37,8 @@ gem 'mini_magick', '4.5.1'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'dotenv-rails'
 
+gem 'google-analytics-rails'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
