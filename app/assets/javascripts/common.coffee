@@ -5,4 +5,3 @@ $(document).on 'turbolinks:load', ->
   $('.drawer-menu .lineup').on 'click', ->
     $(this).next().slideToggle()
     return false
-  return false
