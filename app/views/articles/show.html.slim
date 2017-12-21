@@ -16,9 +16,9 @@
   .title-container.row-space-top-4
     h1 #{@article.title}
     h4 #{@article.subtitle}
-  
+  br 
   .col-lg-9.col-md-10.col-12.col-center.row-space-top-4
-    = image_tag @article.article_picture.photo.url(:original), class: "row-space-top-4 row-space-4 col-12 col-center p-x-0"
+    //= image_tag @article.article_picture.photo.url(:original), class: "row-space-top-4 row-space-4 col-12 col-center p-x-0"
     == @article.contents
   hr.col-11.col-md-7.col-center.row-space-top-7.row-space-7
   .row-space-top-4.related-articles.col-lg-9.col-md-10.col-12.col-center
