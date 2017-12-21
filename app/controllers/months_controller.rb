@@ -4,6 +4,6 @@ class MonthsController < ApplicationController
   
   def show
     @month = Month.find(params[:id])
-    @articles = @month.articles
+    @articles = @month.articles.order(created_at: :desc)
   end
 end
