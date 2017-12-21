@@ -24,7 +24,7 @@
             .border-around.article-card.required-container
               .image.bg-img-cover[style="background-image:url(#{a.article_picture.photo.url(:medium)})"]
               .p-x-5
-                h3 #{a.title.truncate(20)}
+                h3 #{a.title}
                 p #{a.subtitle.truncate(60)}
               .edited-date.absolute-container
                 p #{Month.find(a.month_id).year}.#{Month.find(a.month_id).month}
